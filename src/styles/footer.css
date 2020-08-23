@@ -1,0 +1,32 @@
+@font-face {
+    font-family: 'jelytta';
+    src: url('/home/lazy_bird/Downloads/Fonts/Jelytta-converted/jelytta-pvlv-webfont.woff2') format('woff2'),
+         url('/home/lazy_bird/Downloads/Fonts/Jelytta-converted/jelytta-pvlv-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+#container{ 
+    width: 100vw;
+    height:25vh;
+    background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+    margin-top: 13%;
+    margin-left:-1.5%;
+    padding:2.5%;
+    margin-bottom: -20vh !important;
+}
+
+#social-media img{
+    width:6%;
+    height:6%;
+    margin:1.5%;
+}
+#social-media{
+    margin-left:42%;
+}
+#prof-name{
+    font-family:"jelytta";
+    margin-left:48%;
+    font-weight: bold;
+}

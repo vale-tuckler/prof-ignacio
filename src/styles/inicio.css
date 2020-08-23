@@ -1,0 +1,97 @@
+/*LA FUENTE NO FUNCIONA. REACT NO LA LEE (Probablemente)  */ 
+
+@font-face {
+    font-family: 'jelytta';
+    src: url('../Fonts/Jelytta-converted/jelytta.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+    font-family:"quick-kiss";
+    src: url('../Fonts/quick-kiss-converted/quick-kiss.woff') format('woff');
+}
+@font-face{
+    font-family:"oasis";
+    src: url("../Fonts/oasis-converted/oasis-bw0jv-webfont.woff") format("woff");
+    font-weight:normal;
+}
+
+body{
+    margin:0;
+    padding:0;
+}
+.phrase{
+    display:inline-grid;
+    width:50vw;
+    height: 100vh;
+}
+
+#phrase1{
+    height:100vh;
+    /*background: #ECF589;
+    background: -webkit-linear-gradient(bottom, #ECF589, #FFE803);
+    background: -moz-linear-gradient(bottom, #ECF589, #FFE803);
+    background: linear-gradient(to top, #ECF589, #FFE803);*/
+    background-color: #FFE801;
+    font-family:"oasis" ;
+    text-align: center;
+    font-style: italic;
+    font-weight: lighter;
+}
+.text{
+    font-family:"oasis" !important;
+    position:relative;
+    transform: translate(2%, 320%);
+    font-size: 200%;
+    margin-left:10%;
+    padding-top:3%;
+}
+#phrase2{
+    height:100vh;
+    background-color:yellowgreen;
+    text-align: center;
+    font-style: italic;
+}
+#phrase3{
+    height:100vh;
+    background-color: palevioletred;
+    text-align: center;
+    font-style: italic;
+}
+.banner{
+    font-family:Tahoma;
+    font-weight: lighter;
+    padding:0;
+    opacity: 0.8;   
+    font-size:300%;
+    margin-left: 55%;
+
+}
+#phrase4{
+    position:relative;
+}
+#section4{
+    width:100vw;
+    height:100vh;
+    background-color:darkcyan;
+    color:black;
+    margin-left:-1.5%;
+    margin-bottom:-13%;
+}
+.section-image img{
+    margin:0;
+    width: 50vw;
+    height:100vh;
+}
+.container{
+    width:98vw;
+}
+
+#section1, #section2, #section3{
+    display:grid;
+    grid-template-columns:48% 48%;
+    grid-gap:10px;
+    width:123%;    
+    margin-left:-1.5%;
+    margin-right:0;
+}
