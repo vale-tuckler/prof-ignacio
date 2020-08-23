@@ -69,5 +69,5 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 =======
 # prof-ignacio
-prof-ignacio is a freelance project made for an entrepreneurial citizen in Nicaragua who wants to teach a second language to kids in need of better opportunities and innovation from Nicaragua.
+prof-ignacio is a freelance project made for an entrepreneurial citizen in Nicaragua who wants to teach english as a second language to kids in need of better opportunities and innovation from Nicaragua.
 >>>>>>> 7f2378a5c7af434a5b9980bf3cc4612ca91ac45e
