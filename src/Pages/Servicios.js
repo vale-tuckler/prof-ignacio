@@ -1,7 +1,8 @@
 import React from 'react';
 import NavigationBar from '../Components/NavigationBar.js';
 import Footer from '../Components/Footer.js';
-import Background from '../images/background-white.jpg';
+import InfoServicios from './InfoServicios.js';
+import Background from '../images/books.jpg';
 import Background2 from '../images/whiteboard.jpg';
 import '../styles/servicios.css';
 
@@ -14,17 +15,17 @@ class Servicios extends React.Component{
 
                 <div className="interpretacion traduccion">
                     <img src={Background} alt="Fondo con libros" title="Libros" className="background"/>
-                    <a href="" id="link1">
-                        <ul className="box">
-                            <li className="text">Interpretación</li>
-                            <li className="text">Y</li>
-                            <li className="text">Traducción general</li>
+                    <a href="/info-servicios" id="link1">
+                        <ul className="box1">
+                            <li className="text1">Interpretación</li>
+                            <li className="text1">Y</li>
+                            <li className="text1">Traducción general</li>
                         </ul> 
                     </a>                   
                 </div>        
                 <div className="clases reforzamientos">
                     <img src={Background2} alt="Whiteboard image" title="Whiteboard" className="background2"/>
-                    <a href="" id="link2">
+                    <a href="/info-servicios" id="link2">
                         <ul className="box2">
                             <li className="text2">Clases particulares</li>
                             <li className="text2">Y</li>

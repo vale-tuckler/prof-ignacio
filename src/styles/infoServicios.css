@@ -1,0 +1,26 @@
+@font-face{
+    font-family:"bee-leave";
+    src:url("../Fonts/bee-leave/beeleave.ttf") format("truetype");
+}
+.documents-list, .beneficios, .texto{
+    margin:3%;
+    line-height:250%;
+    font-family:"trueno";
+    font-size: 135%;
+}
+.secondary-title{
+    margin:3%;
+    font-family:"bee-leave";
+    font-weight:lighter;
+    font-size:175%;
+}
+.texto{
+    width:80vw;
+}
+#prices{
+    margin-top:3%;
+    margin-left:48%;
+    padding:1%;
+    width:10%;
+}
+

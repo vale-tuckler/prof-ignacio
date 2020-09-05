@@ -22,16 +22,13 @@ body{
 }
 .phrase{
     display:inline-grid;
+    font-family:"oasis" !important;
     width:50vw;
     height: 100vh;
 }
 
 #phrase1{
     height:100vh;
-    /*background: #ECF589;
-    background: -webkit-linear-gradient(bottom, #ECF589, #FFE803);
-    background: -moz-linear-gradient(bottom, #ECF589, #FFE803);
-    background: linear-gradient(to top, #ECF589, #FFE803);*/
     background-color: #FFE801;
     font-family:"oasis" ;
     text-align: center;
@@ -48,23 +45,26 @@ body{
 }
 #phrase2{
     height:100vh;
-    background-color:yellowgreen;
+    background-color:#92E621;
+    /*background-color:yellowgreen;*/
     text-align: center;
     font-style: italic;
 }
 #phrase3{
     height:100vh;
-    background-color: palevioletred;
+    background-color:#FF75C9;
+    /*background-color: palevioletred;*/
     text-align: center;
     font-style: italic;
 }
 .banner{
-    font-family:Tahoma;
+    font-family:"oasis";
     font-weight: lighter;
-    padding:0;
+    padding:1.5%;
     opacity: 0.8;   
-    font-size:300%;
-    margin-left: 55%;
+    font-size:400%;
+    margin-left: 44%;
+    margin-bottom:-1%;
 
 }
 #phrase4{
@@ -72,9 +72,11 @@ body{
 }
 #section4{
     width:100vw;
-    height:100vh;
-    background-color:darkcyan;
-    color:black;
+    height:105vh;
+    background-color:#3C1148;
+    /*background-color:#00955A;*/
+    /*background-color:darkcyan;*/
+    color:white;
     margin-left:-1.5%;
     margin-bottom:-13%;
 }
@@ -94,4 +96,56 @@ body{
     width:123%;    
     margin-left:-1.5%;
     margin-right:0;
+}
+#flags{
+    width:43%;
+    height:35%;
+    margin-left:32%;
+    border-radius: 0 10px 10px 0;
+}
+.izq, .der{
+    width:5%;
+    height:5%;
+    display:inline-grid;
+}
+.left{
+    /*display:inline-grid;*/
+    grid-template-columns: auto auto;
+    margin-top:-15%;
+}
+#izq1{
+    margin-top:-40%;
+    margin-left:3%;
+}
+#izq2{
+    margin-top:-22%;
+    margin-left:2%;
+}
+#izq3{
+    margin-left:2%;
+}
+.right{
+    width:100%;
+    margin-left:80%;
+}
+#der3{
+    margin-top:-46%;
+}
+#der2{
+    margin-top:-28%;
+}
+#der1{
+    margin-top:-6%;
+}
+#free{
+    width:5%;
+    height:5%;
+    margin-top:-46.5%;
+    margin-left:70%;
+}
+#bigben{
+    width:5%;
+    height:5%;
+    margin-top:-47%;
+    margin-left:-45%;
 }

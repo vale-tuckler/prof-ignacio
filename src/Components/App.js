@@ -4,6 +4,7 @@ import Inicio from '../Pages/Inicio.js';
 import Acerca from '../Pages/Acercade.js';
 import Servicios from '../Pages/Servicios.js';
 import Contacto from '../Pages/Contacto.js';
+import InfoServicios from '../Pages/InfoServicios.js';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <BrowserRouter>
         <Route exact path="/inicio" component = {Inicio} />
         <Route exact path="/servicios" component={Servicios} />
+        <Route exact path="/info-servicios" component={InfoServicios}/>
         <Route exact path ="/acerca-de" component={Acerca} />
         <Route exact path="/contacto" component={Contacto} />
       </BrowserRouter>

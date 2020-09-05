@@ -1,0 +1,25 @@
+@font-face{
+    font-family:"bee-leave";
+    src:url("../Fonts/bee-leave/beeleave.ttf") format("truetype");
+}
+#teacher-icon{
+    width:15%;
+    height:15%;
+    margin-left:50%;
+}   
+#name{
+    font-weight: bold;
+    font-style: initial;
+}
+.info{
+    font-family:"trueno";
+    line-height:220%;
+    font-size:110%;
+    text-align:justify;
+}
+.text-container{
+    margin-top:5%;
+    width:50vw;
+    text-align:justify;
+    margin-left:32%;
+}
