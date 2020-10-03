@@ -8,9 +8,9 @@ import './Fonts/quick-kiss-converted/quick-kiss.woff';
 import './Fonts/Jelytta-converted/jelytta.woff';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <>
     <App />
-  </React.StrictMode>,
+  </>,
   document.getElementById('root')
 );
 

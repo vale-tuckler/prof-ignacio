@@ -3,19 +3,22 @@
     src:url("../Fonts/bee-leave/beeleave.ttf") format("truetype");
 }
 .documents-list, .beneficios, .texto{
-    margin:3%;
+    margin:2%;
     line-height:250%;
     font-family:"trueno";
     font-size: 135%;
 }
 .secondary-title{
-    margin:3%;
+    margin-top:5%;
+    margin-bottom:2%;
+    margin-left:4%;
     font-family:"bee-leave";
     font-weight:lighter;
     font-size:175%;
 }
 .texto{
     width:80vw;
+    margin-left:4%;
 }
 #prices{
     margin-top:3%;
@@ -23,4 +26,7 @@
     padding:1%;
     width:10%;
 }
-
+.main-title{
+    visibility: hidden;
+    opacity: 0;
+}

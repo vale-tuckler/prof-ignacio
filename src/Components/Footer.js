@@ -7,7 +7,7 @@ import '../styles/footer.css';
 
 const Footer = () =>{
     return(
-        <div id="container">
+        <div id="footer">
            <div id="prof-name">
                &copy;Prof. Ignacio
            </div>

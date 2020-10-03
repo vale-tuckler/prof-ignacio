@@ -5,10 +5,10 @@
 #teacher-icon{
     width:15%;
     height:15%;
-    margin-left:50%;
+    margin-left:40%;
 }   
 #name{
-    font-weight: bold;
+    font-weight: lighter;
     font-style: initial;
 }
 .info{
@@ -21,5 +21,14 @@
     margin-top:5%;
     width:50vw;
     text-align:justify;
-    margin-left:32%;
+    margin-left:25%;
+}
+.main-title{
+    visibility: visible;
+}
+.intro{
+    font-size:125%;
+}
+.skills{
+    font-size:120%;
 }

@@ -11,11 +11,16 @@
     src:url("../Fonts/bee-leave/beeleave.ttf") format("truetype");
 }
 
+body{
+    margin:0;
+    padding:0;
+    overflow-x: hidden;
+}
 
 .main-title{
     width:100vw;
     text-align: center;
-    margin-left:-1.5%;
+    margin-left:-0.5%!important;
     margin-top:4%;
     margin-bottom:4%;
     padding:2%;
@@ -23,10 +28,23 @@
     font-weight:lighter;
     font-size:195%;
     font-family:"trueno";
+    visibility: hidden;
+    opacity:0;
+}
+#title-element{
+    visibility:"hidden";
+    opacity:0;
 }
 .interpretacion{    
-    width: 90vw;
+    width: 85vw;
     height: 100vh;
+    margin-left:1%;
+    visibility: hidden;
+    opacity:0;
+}
+.clases{
+    visibility: hidden;
+    opacity:0;
 }
 .box1:hover, .box2:hover{
     opacity:0.3;
@@ -53,12 +71,13 @@
 .text2{
     font-size: 200%;
     margin:8%;
+    margin-left:-22%;
     color:black;
 }
 
 .box2{
     margin-top:-60%;
-    margin-bottom:35%;
+    margin-bottom:38%;
     margin-left:45%;
 }
 #link1{

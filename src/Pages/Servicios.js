@@ -1,19 +1,50 @@
 import React from 'react';
 import NavigationBar from '../Components/NavigationBar.js';
 import Footer from '../Components/Footer.js';
-import InfoServicios from './InfoServicios.js';
 import Background from '../images/books.jpg';
 import Background2 from '../images/whiteboard.jpg';
 import '../styles/servicios.css';
+import { gsap } from 'gsap/dist/gsap';
+import {ScrollTrigger} from 'gsap/dist/ScrollTrigger';
+import { Power3 } from 'gsap';
+import { useRef, useEffect } from 'react';
+//gsap.registerPlugin(ScrollTrigger);
 
-class Servicios extends React.Component{
-    render(){
+const Servicios = () => {   
+
+        let titleEl = useRef(null);
+        let interpretationEl = useRef(null);
+        let  reinforcement = useRef(null);
+
+        function ServicesAnimation(){
+                let Mytl = gsap.timeline({
+                    scrollTrigger:{
+                        trigger:titleEl,                        
+                        start:"bottom bottom",
+                        markers:{
+                            startColor:"red",
+                            endColor:"green",
+                            fontSize: "17px"
+                        }                        
+                    },
+                    delay:0.6
+                });
+                Mytl
+                .fromTo(titleEl,{visibility:"hidden", opacity:0, yPercent:10},{visibility:"visible", opacity:1, ease:Power3.easeOut, yPercent:0, duration:2, delay:4})
+                .fromTo(interpretationEl, {visibility:"hidden", opacity:0, xPercent:-50},{ visibility:"visible", opacity:1, xPercent:0, delay:1.5, duration:1.5})
+                .fromTo(reinforcement, {visibility:"hidden", opacity:0, xPercent:50},{visibility:"visible", opacity:1, xPercent:0, delay:2, duration:1.5})
+        }
+
+        useEffect(()=>{
+            ServicesAnimation();
+        })
         return(
-            <div className="container">
-                <NavigationBar />
-                <h1 className="main-title">SERVICIOS</h1>
+            <div className="ServicesContainer">
+                <NavigationBar />                
+                    
+                    <h1 className="main-title" ref={el => titleEl = el}>SERVICIOS</h1>     
 
-                <div className="interpretacion traduccion">
+                <div className="interpretacion traduccion" ref={elem => interpretationEl = elem}>
                     <img src={Background} alt="Fondo con libros" title="Libros" className="background"/>
                     <a href="/info-servicios" id="link1">
                         <ul className="box1">
@@ -23,7 +54,7 @@ class Servicios extends React.Component{
                         </ul> 
                     </a>                   
                 </div>        
-                <div className="clases reforzamientos">
+                <div className="clases reforzamientos" ref={elem => reinforcement = elem}>
                     <img src={Background2} alt="Whiteboard image" title="Whiteboard" className="background2"/>
                     <a href="/info-servicios" id="link2">
                         <ul className="box2">
@@ -37,5 +68,4 @@ class Servicios extends React.Component{
             </div>
         );
     }
-}
 export default Servicios;
