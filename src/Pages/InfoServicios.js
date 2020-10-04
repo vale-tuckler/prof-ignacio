@@ -33,55 +33,40 @@ const InfoServicios = () => {
         let Bounce = gsap.parseEase("bounce.out");
         let Circ = gsap.parseEase("circ.out");
        
-        ScrollTrigger.create({
-            trigger:MainTitle1,
-            start:"top bottom",
-        });
-       ScrollTrigger.create({
-            trigger:MainTitle2,
-            start:"bottom top"        
-        });
-
-        ScrollTrigger.create({
-            trigger:classesTitle,
-            start:"bottom bottom"        
-        })
-
-        let titulos1 = [classesTitle, ClassesText];
 
         let myTL = gsap.timeline();
         myTL
             .fromTo(MainTitle1,
                 {visibility:"hidden", opacity:0, yPercent:45},
-                {visibility: "visible", duration:2, opacity:1, ease:Power2.easeOut, delay:4, yPercent:0})
+                {scrollTrigger:{trigger:MainTitle1, start:"top bottom"},visibility: "visible", duration:2, opacity:1, ease:Power2.easeOut, delay:4, yPercent:0})
             .fromTo(InterpreText,
                 {visibility:"hidden", opacity:0, xPercent:20},
                 {visibility:"visible", opacity:1, xPercent:0, ease:Power2.easeOut, duration:1.5, delay:0.5})
        //SECOND PART
             .fromTo(MainTitle2,
                 {visibility:"hidden", opacity:0, yPercent:35},
-                {visibility:"visible", duration:2, opacity:1, ease:Bounce, delay:1.5, yPercent:0})        
-            .fromTo(titulos1, 
+                {scrollTrigger:{trigger:MainTitle2, start:"bottom bottom"},visibility:"visible", duration:2, opacity:1, ease:Bounce, delay:1.5, yPercent:0})        
+            .fromTo([classesTitle, ClassesText], 
                 {visibility:"hidden", opacity:0, yPercent:-28}, 
-                {visibility:"visible", opacity:1, duration:2, ease:Circ, delay:1, yPercent:0})
+                {scrollTrigger:{trigger:classesTitle, start:"bottom bottom"},visibility:"visible", opacity:1, duration:2, ease:Circ, delay:1, yPercent:0})
             .fromTo([AbilitesTitle, AbilitesText],  
                 {visibility:"hidden", opacity:0, yPercent:-25}, 
-                {visibility:"visible", opacity:1, duration:1.5, ease:Power2.easeIn, delay:0.5, yPercent:0})                    
+                {scrollTrigger:{trigger:"#abilitesTitle", start:"bottom bottom"},visibility:"visible", opacity:1, duration:1.5, ease:Power2.easeIn, delay:0.5, yPercent:0})                    
             .fromTo([ReinTitle, ReinText], 
                 {visibility:"hidden", opacity:0, yPercent:25}, 
-                {visibility:"visible", opacity:1, duration:1, ease:Power2.easeInOut, delay:1, yPercent:0})
+                {scrollTrigger:{trigger:ReinTitle, start:"bottom bottom"},visibility:"visible", opacity:1, duration:1, ease:Power2.easeInOut, delay:1, yPercent:0})
         //THIRD PART 
             .fromTo([UntrackedTitle, UntrackedText], 
                 {visibility:"hidden", opacity:0, xPercent:25}, 
-                {visibility:"visible", opacity:1, duration:1.8, ease:Circ, delay:1, xPercent:0})
+                {scrollTrigger:{trigger:"#untrackedTitle", start:"bottom bottom"},visibility:"visible", opacity:1, duration:1.8, ease:Circ, delay:1, xPercent:0})
             .fromTo([BenefitsTitle,BenefitsText], 
                 {visibility:"hidden", opacity:0, yPercent:20}, 
-                {visibility:"visible", opacity:1, duration:1.8, ease:Circ, delay:1, yPercent:0, yPercent:0})                
+                {scrollTrigger:{trigger:"#BenefitsTitle", start:"top center"},visibility:"visible", opacity:1, duration:1.8, ease:Circ, delay:1, yPercent:0, yPercent:0})                
         
         //FOURTH PART
             .fromTo(PricesTitle, 
                 {visibility:"hidden", opacity:0}, 
-                {visibility:"visible", opacity:1, duration:1.5, delay:0.6, scrollTrigger:{trigger:PricesTitle, start:"bottom bottom"}});                                                                
+                {scrollTrigger:{trigger:"#pricesTitle", start:"bottom bottom"}, visibility:"visible", opacity:1, duration:1.5, delay:0.6}, "1");                                                                
 
             return myTL;                
     }
@@ -113,8 +98,8 @@ const InfoServicios = () => {
                 </p>
             </section>
             <section>
-                <h2 className="secondary-title" ref={a => AbilitesTitle = a}>Habilidades disponibles</h2>
-                <ul className="documents-list" ref={t => AbilitesText = t}> 
+                <h2 className="secondary-title" ref={a => AbilitesTitle = a} id="abilitesTitle">Habilidades disponibles</h2>
+                <ul className="documents-list" ref={t => AbilitesText = t} id="abilitiesText"> 
                     <li>Gramática</li>
                     <li>Habla/Conversación</li>
                     <li>Redacción</li>
@@ -130,14 +115,14 @@ const InfoServicios = () => {
                     su proceso de aprendizaje. Incluye videollamadas.
                 </p>
 
-                <h2 className="secondary-title" ref={el => UntrackedTitle = el}>Reforzamientos sin registro</h2>
-                <p className="texto" ref={el => UntrackedText = el}>
+                <h2 className="secondary-title" ref={el => UntrackedTitle = el} id="untrackedTitle">Reforzamientos sin registro</h2>
+                <p className="texto" ref={el => UntrackedText = el} >
                     Incluyen un tema en específico por sesión, puede ser un tema relacionado a cualquier habilidad
                     del idioma. No incluye videollamadas ni registro de progreso.
                 </p>
             </section>
             <section>
-                <h2 className="secondary-title" ref={b => BenefitsTitle = b}>Beneficios adicionales</h2>
+                <h2 className="secondary-title" ref={b => BenefitsTitle = b} id="BenefitsTitle">Beneficios adicionales</h2>
                 <ul className="beneficios" ref={belem => BenefitsText = belem}>
                     <li>Flexibilidad del método de enseñanza.</li>
                     <li>Es posible trabajar casi con cualquier presupuesto.</li>
@@ -153,7 +138,7 @@ const InfoServicios = () => {
                 <Collapse isOpen={isOpen}>
                     <Card>
                         <CardBody>                        
-                            <h1 className="main-title" ref={elem => PricesTitle = elem}>Precios</h1>
+                            <h1 className="main-title" ref={elem => PricesTitle = elem} id="pricesTitle">Precios</h1>
                             <section className="services-list">
                                 <h2 className="secondary-title">Clases personalizadas</h2>
                                 <p className="texto">

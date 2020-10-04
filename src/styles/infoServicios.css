@@ -26,6 +26,10 @@
     padding:1%;
     width:10%;
 }
+#pricesTitle{
+    visibility:"visible" !important;
+    opacity:1;
+}
 .main-title{
     visibility: hidden;
     opacity: 0;
