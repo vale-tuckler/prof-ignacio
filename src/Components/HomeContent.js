@@ -25,10 +25,10 @@ const HomeCard = (props) =>{
             mytimeline
                 .fromTo(ImgRef,
                     {opacity:0, xPercent:-8, visibility:"hidden"},
-                    {scrollTrigger:{trigger:ImgRef, start:"top center"},duration:2, visibility:"visible", opacity:1, xPercent:0, ease:Power3.easeInOut})
+                    {scrollTrigger:{trigger:ImgRef, start:"top center"},duration:2, visibility:"visible", opacity:1, xPercent:0, ease:Power3.easeOut, delay:1})
                .fromTo(colorEl,
                     {opacity:0, xPercent:8, visibility:"hidden"},
-                    {scrollTrigger:{trigger:colorEl, start:"top center"},duration:2, visibility:"visible",opacity:1,xPercent:0, ease:Power3.easeOut})
+                    {scrollTrigger:{trigger:colorEl, start:"top center"},duration:2, visibility:"visible", opacity:1, xPercent:0, ease:Power3.easeOut, delay:1})
             
                                                     
             return mytimeline;
@@ -74,7 +74,7 @@ const HomeCard = (props) =>{
         <div className="Homecontainer">                
             <section id={props.sectionID}>
                     <div className="section-image">
-                        <img src = {props.image} alt ={props.alt} title={props.title} ref={i => ImgRef = i}/>
+                        <img src={props.image} alt ={props.alt} title={props.title} ref={i => ImgRef = i}/>
                     </div>
                     <div className="phrase">
                         <aside ref= {x => colorEl = x} id={props.asideID}>                            

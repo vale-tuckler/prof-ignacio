@@ -82,7 +82,7 @@ body{
     margin:0;
     width: 50vw;
     height:100vh;
-    visibility:"hidden";
+    visibility:"hidden" !important;
     opacity:0;
 }
 .Homecontainer{
