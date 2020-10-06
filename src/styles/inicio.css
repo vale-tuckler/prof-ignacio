@@ -29,7 +29,7 @@ body{
 
 #phrase1{
     height:100vh;
-    background-color: #FFE801;
+    background-color: #FFE801 !important;
     font-family:"oasis" ;
     text-align: center;
     font-style: italic;
@@ -45,13 +45,13 @@ body{
 }
 #phrase2{
     height:100vh;
-    background-color:#00E5FF;
+    background-color:#00E5FF !important;
     text-align: center;
     font-style: italic;
 }
 #phrase3{
     height:100vh;
-    background-color:#FF81FC;
+    background-color:#FF81FC !important;
     text-align: center;
     font-style: italic;
 }
@@ -81,9 +81,9 @@ body{
 .section-image img{
     margin:0;
     width: 50vw;
-    height:100vh;
-    visibility:"hidden" !important;
-    opacity:0;
+    height:100vh;  
+    visibility:"hidden";
+    opacity:0;  
 }
 .Homecontainer{
     width:100vw;

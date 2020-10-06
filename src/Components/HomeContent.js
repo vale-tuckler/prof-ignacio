@@ -20,12 +20,12 @@ const HomeCard = (props) =>{
             let Bounce = gsap.parseEase("bounce.out");
             let Circ = gsap.parseEase("circ.out");
 
-            let mytimeline = gsap.timeline({delay:4});
+            let mytimeline = gsap.timeline({delay:2.5});
             
             mytimeline
                 .fromTo(ImgRef,
                     {opacity:0, xPercent:-8, visibility:"hidden"},
-                    {scrollTrigger:{trigger:ImgRef, start:"top center"},duration:2, visibility:"visible", opacity:1, xPercent:0, ease:Power3.easeOut, delay:1})
+                    {scrollTrigger:{trigger:ImgRef, start:"top center"},duration:2, visibility:"visible", opacity:1, xPercent:0, ease:Power3.easeOut})
                .fromTo(colorEl,
                     {opacity:0, xPercent:8, visibility:"hidden"},
                     {scrollTrigger:{trigger:colorEl, start:"top center"},duration:2, visibility:"visible", opacity:1, xPercent:0, ease:Power3.easeOut, delay:1})
@@ -77,7 +77,7 @@ const HomeCard = (props) =>{
                         <img src={props.image} alt ={props.alt} title={props.title} ref={i => ImgRef = i}/>
                     </div>
                     <div className="phrase">
-                        <aside ref= {x => colorEl = x} id={props.asideID}>                            
+                        <aside id={props.asideID}  ref= {x => colorEl = x}>                            
                             <p className="text">{props.text1}</p>                            
                             <p className="text"> {props.text2}</p>
                         </aside>
